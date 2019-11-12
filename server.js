@@ -1,4 +1,5 @@
-require("dotenv").config();
+process.env.NODE_ENV = "production";
+if (process.env.NODE_ENV === "development") require("dotenv").config();
 const express = require("express");
 const app = express();
 const userRouter = require("./routes/user");
@@ -25,5 +26,5 @@ mongoose
 app.use("/api/v1/users", userRouter);
 
 //Set the port variable
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => console.log("Server listening on port " + PORT));
