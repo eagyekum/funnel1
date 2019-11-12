@@ -1,0 +1,5 @@
+<div class="container">
+  <% typeof users != undefined? users : "" %> <% users.map(user => { %> <%=
+  user.email %> <br />
+  <% }) %>
+</div>
