@@ -23,7 +23,7 @@ mongoose
   .catch(err => console.error(err.message));
 
 //Routes
-app.use("/api/v1/users", userRouter);
+app.use("/", userRouter);
 
 //Set the port variable
 const PORT = process.env.PORT || 5500;
