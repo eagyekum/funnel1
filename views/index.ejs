@@ -1,16 +1,16 @@
 <div class="container">
   <div class="card optin text-white bg-dark mb-3">
     <h2>How to go from zero to $10,000 per month in 30 days or less</h2>
-    <div class="caption-before-input">
+    <!--<div class="caption-before-input">
       Real People With Real Results
-    </div>
+    </div> -->
     <%- include('./partials/message') %>
     <form action="/api/v1/users" method="POST">
       <div class="form-group">
         <input
           type="email"
           name="email"
-          class="form-control"
+          class="form-control btn-block btn-lg"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Enter Your Best Email"
@@ -19,11 +19,11 @@
       </div>
 
       <button type="submit" class="btn btn-danger btn-lg btn-block btn-one">
-        YES! GIVE ME INSTANT ACCESS!
+        YES! SHOW ME NOW!
       </button>
     </form>
     <small id="emailHelp" class="form-text text-muted"
-      >**You Will Never Get Spam. We Protect Your Privacy</small
+      >** You Will Never Get Spam. We Protect Your Privacy **</small
     >
   </div>
 </div>

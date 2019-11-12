@@ -22,15 +22,19 @@ router.post("/", async (req, res) => {
   const { error } = validator(req.body);
   if (error) {
     errors.push(error.details[0].message);
+    console.log(error);
   }
   const { email } = req.body;
   const user = new User({ email });
+
   if (errors.length > 0) {
     res.status(400).render("index", { errors, email });
   }
   try {
     await user.save();
-    res.status(201).redirect("/api/v1/users");
+    res
+      .status(201)
+      .redirect("https://f82583pfb4pfsoaaxdsapdpotq.hop.clickbank.net/");
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
